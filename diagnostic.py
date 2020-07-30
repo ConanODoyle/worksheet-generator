@@ -1,8 +1,8 @@
-def export_problems(problem_dict, name='problemset_count'):
+def export_problems(problem_dict, name='problemset_count', dir="output/"):
 	if name[-4:] != ".txt":
 		name = name + ".txt"
 
-	fo = open(name, 'w')
+	fo = open(dir + name, 'w')
 
 	problems = list(problem_dict.items())
 	problems.sort()

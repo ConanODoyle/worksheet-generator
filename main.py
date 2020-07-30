@@ -27,9 +27,6 @@ for i in range(4, 31, 5): #lower chance of multiples of 5
 sub_num_weights = [0 if i <= 10 else -0.5 for i in range(1, 31)]
 num_weights = list(np.add(num_weights, sub_num_weights))
 
-# results = generate_problems(100, [add, sub, mul], range(1, 31), op_weights=[0.1, 0.3, 1], num_weights=num_weights, condition_check=function)
-
-
 def hard_multiplication(a, b, op):
 	a_str, b_str = (str(a), str(b))
 	

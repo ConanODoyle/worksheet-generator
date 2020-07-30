@@ -31,7 +31,7 @@ def generate_problems(num_problems, operators, values, op_weights=None, num_weig
 	return (problem_set, solution_set, problems)
 
 
-def generate_problem_set_image(problem_set, solution_set, name="problemset.png"):
+def generate_problem_set_image(problem_set, solution_set, name="problemset.png", dir="output/"):
 	# settings
 	bg_color = (255, 255, 255, 255)  # white, full opacity
 	txt_color = (0, 0, 0, 255)  # black, full opacity
@@ -98,7 +98,7 @@ def generate_problem_set_image(problem_set, solution_set, name="problemset.png")
 			y = y+1
 
 	full_img.paste(img, page_ofst)
-	full_img.save(name)
+	full_img.save(dir + name)
 
 	x, y = (0, 0)
 	for solution in solution_set:
@@ -118,4 +118,4 @@ def generate_problem_set_image(problem_set, solution_set, name="problemset.png")
 			y = y+1
 
 	full_img.paste(img, page_ofst)
-	full_img.save("solution_" + name)
+	full_img.save(dir + "solution_" + name)
